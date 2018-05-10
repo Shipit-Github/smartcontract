@@ -270,7 +270,6 @@ contract SHPT is Ownable, StandardToken  {
       // SafeMath.sub will throw if there is not enough balance.
       balances[this] = balances[this].sub(amount);
       balances[to] = balances[to].add(amount);
-      totalSupply_ = totalSupply_.add(amount);
       emit Transfer(this, to, amount);
   }
   
